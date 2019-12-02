@@ -1,0 +1,55 @@
+#A YAML file is actually a sequence of documents separated by --- lines,
+#and each document is parsed separately to a flattened map.
+sys:
+  secret: ${random.value}
+  intVal: ${random.int}
+  longVal:  ${random.long}
+  uuid: ${random.uuid}
+app:
+  name: DemoApp
+  description:  ${app.name} is a demo for learning spring boot following spring boot reference manual.
+  admin:
+    users:
+      names:
+        - LCF
+        - HJB
+
+spring:
+  messages:
+    basename: static/i18n/messages # 指定i18n文件路径
+    fallback-to-system-locale: false
+  thymeleaf:
+    cache: false #关闭页面缓存
+    prefix: classpath:/static/view/   #thymeleaf访问的路径
+    mode: HTML #'LEGACYHTML5' is deprecated. Using 'HTML' instead
+  mvc:
+    static-path-pattern: /static/**   #default mvc.static-path-pattern=/**
+
+---
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: development
+server:
+  port: 8000
+#if specify 'name' and 'path' attributes, only 'name' will be used.
+logging:
+  file:
+    path: /test/log/dev/springbootdemo/
+#   name: SpringBoot.log
+  level:
+    root: warn
+    org.springframework.web:  debug
+    org.hibernate:  error
+
+
+---
+spring:
+  profiles: production
+server:
+  port: 9000
+logging:
+  file:
+    path: /test/log/prod/springbootdemo/
