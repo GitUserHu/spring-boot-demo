@@ -41,7 +41,7 @@ logging:
 #   name: SpringBoot.log
   level:
     root: warn
-    org.springframework.web:  debug
+    org.springframework.web:  debug # log the details of the registered filter, including their order and URL pattern.
     org.hibernate:  error
 
 

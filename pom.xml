@@ -39,6 +39,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+		<!--webflux NOTE: if add starter-web and starter-webflux together, SpringMVC will be used INSTEAD OF webflux-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jersey</artifactId>
+		</dependency>
 		<!-- lombok for getter and setter-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -46,7 +55,6 @@
 			<version>1.18.10</version>
 			<scope>provided</scope>
 		</dependency>
-
 		<!--Developer tools-->
 		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
