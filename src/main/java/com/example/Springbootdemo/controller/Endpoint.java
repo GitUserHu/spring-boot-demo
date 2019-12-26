@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
-@Component
+//@Component
 @Path("/endpoint")
 public class Endpoint {
     @GET

@@ -10,7 +10,6 @@ import java.util.List;
 @Getter
 @Component
 @ConfigurationProperties(prefix="app.admin.users")
-// @Profile("development")
 public class ConfigDemo {
     private List<String> names = new ArrayList<>();
 }

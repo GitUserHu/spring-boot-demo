@@ -1,9 +1,13 @@
 package com.example.Springbootdemo.controller;
+/**
+ * @author: Jia Bing
+ * @Date 2019/12/09
+ * SpringMVC形式的控制器
+ */
 
 import com.example.Springbootdemo.entity.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
