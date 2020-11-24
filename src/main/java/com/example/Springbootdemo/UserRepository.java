@@ -1,7 +1,10 @@
 package com.example.Springbootdemo;
 
 import com.example.Springbootdemo.entity.user.User;
+
+
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.Repository;
 
 /**
@@ -9,8 +12,8 @@ import org.springframework.data.repository.Repository;
  * @date: 2019/12/19 21:36
  */
 public interface UserRepository extends Repository<User, Long> {
-    User findById();
-    Page<User> findAllByNameEquals(String name);
+    User findById(Long id);
+    Page<User> findAllByNameEquals(String name, Pageable pageable);
 
 }
 
